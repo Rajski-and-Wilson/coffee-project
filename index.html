@@ -12,13 +12,17 @@
 
 
 
+
+
 </head>
 <body>
     <h1 id="header" class>Coffee!</h1>
 
     <hr>
 
-    <form>
+    <div class = "row">
+        <div class = "col-6 ">
+    <form class>
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
@@ -28,16 +32,27 @@
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
+    </div>
+    <div class = "col-6">
+        <table>
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>NAME</th>
                 <th>ROAST</th>
             </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+            </thead>
+            <tbody id="coffees"></tbody>
+        </table>
+
+    </div>
+
+
+
+
+    </div>
+
+
 
 <!--    Tables are a little old school, you need to refactor the code so that each coffee is displayed in a div that contains a heading displaying the coffee name, and the type of roast in a paragraph. Don't display the ids, these are only for our application's internal use-->
 
@@ -96,14 +111,9 @@
             <h3>French</h3><p>dark</p>
         </div>
 
-
-
-
-
-
-
-
     </div>
+
+<!--    End coffee list-->
 
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
