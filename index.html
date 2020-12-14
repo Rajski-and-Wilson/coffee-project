@@ -16,11 +16,26 @@
 
 </head>
 <body>
-    <h1 id="header" class>Coffee!</h1>
+    <h1 id="header">Coffee!</h1>
 
     <hr>
-
     <div class = "row m-5">
+    <div class = "col-6">
+
+        <table>
+            <thead>
+            <tr>
+                <!--                <th>ID</th>-->
+                <!--                <th>NAME</th>-->
+                <!--                <th>ROAST</th>-->
+            </tr>
+            </thead>
+            <div id="coffees" class="d-flex flex-wrap"></div>
+        </table>
+
+    </div>
+
+
         <div class = "col-6">
     <form>
         <label for="roast-selection">Roast</label>
@@ -49,15 +64,12 @@
         <button class = "btn-primary" type="submit" id="submit">Submit</button>
     </form>
 
-    </div>
 
 <!--        forms part 2-->
 
         <h2>Add a Coffee</h2>
 
-        <div class = "row ">
-            <div class = "col-6">
-                <form name="form2">>
+                <form name="form2">
                     <label for="roastSelection2"><strong>Roast</strong></label>
                     <br>
                     <select name="roastSelection2" id="roastSelection2">
@@ -74,7 +86,7 @@
                     <!--        <input type="text" class="form-control" id="search-coffees">-->
                     <!--        </div>-->
                     <input placeholder="Enter some text" name="addCoffee"/>
-                    <p id="values"></p>
+                    <p id="valuesTwo"></p>
 
                     <button id="input2" class = "btn-primary" type="submit" id="submit2">Submit</button>
                 </form>
@@ -84,23 +96,11 @@
 
 
 
-    <div class = "col-6">
-        <table>
-            <thead>
-            <tr>
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-            </tr>
-            </thead>
-            <tbody id="coffees"></tbody>
-        </table>
 
     </div>
-    </div>
 
 
-
+</div>
 
 
 

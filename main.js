@@ -3,8 +3,8 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<h2 class="float-left">' + coffee.name + '</h2>';
-    html += '<p>' + coffee.roast + '</p>';
+    html += '<h4 class="float-left m-2">' + coffee.name + '</h4>';
+    html += '<p class="p-3">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -99,3 +99,6 @@ var addSubmit = document.getElementById('input2')
         console.log(newRoast.value);
     })
 
+//
+// This is code for delaying a style
+// function myFunction() {  document.getElementById("myDIV").style.transitionDelay = "2s";}
