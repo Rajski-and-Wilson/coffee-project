@@ -21,15 +21,25 @@
     <hr>
 
     <div class = "row">
-        <div class = "col-6 ">
-    <form class>
-        <label for="roast-selection"></label>
+        <div class = "col-6">
+    <form>
+        <label for="roast-selection">Roast</label>
+        <br>
         <select id="roast-selection">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+<!--        <input id="submit" class = "btn-primary" type="submit" />-->
+    </form>
+            <h3>Coffee Name</h3><br>
+    <form>
+        <div class ="input-group w-25">
+        <label for="search-coffees"></label>
+        <input type="text" class="form-control" id="search-coffees">
+        <button class = "btn-primary" type="submit" id="submit">Submit</button>
+        </div>
     </form>
 
     </div>
@@ -37,19 +47,15 @@
         <table>
             <thead>
             <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
             </tr>
             </thead>
             <tbody id="coffees"></tbody>
         </table>
 
     </div>
-
-
-
-
     </div>
 
 
