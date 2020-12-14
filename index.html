@@ -20,7 +20,7 @@
 
     <hr>
 
-    <div class = "row">
+    <div class = "row m-5">
         <div class = "col-6">
     <form>
         <label for="roast-selection">Roast</label>
@@ -32,17 +32,63 @@
             <option>dark</option>
         </select>
 <!--        <input id="submit" class = "btn-primary" type="submit" />-->
+
+
+
+
     </form>
             <h3>Coffee Name</h3><br>
     <form>
-        <div class ="input-group w-25">
-        <label for="search-coffees"></label>
-        <input type="text" class="form-control" id="search-coffees">
+<!--        <div class ="input-group w-25">-->
+<!--        <label for="search-coffees"></label>-->
+<!--        <input type="text" class="form-control" id="search-coffees">-->
+<!--        </div>-->
+        <input placeholder="Enter some text" name="name"/>
+        <p id="values"></p>
+
         <button class = "btn-primary" type="submit" id="submit">Submit</button>
-        </div>
     </form>
 
     </div>
+
+<!--        forms part 2-->
+
+        <h2>Add a Coffee</h2>
+
+        <div class = "row ">
+            <div class = "col-6">
+                <form>
+                    <label for="roast-selection2"><strong>Roast</strong></label>
+                    <br>
+                    <select id="roast-selection2">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <!--        <input id="submit" class = "btn-primary" type="submit" />-->
+
+
+
+
+                </form>
+                <h4>Name</h4><br>
+                <form name="form2">
+                    <!--        <div class ="input-group w-25">-->
+                    <!--        <label for="search-coffees"></label>-->
+                    <!--        <input type="text" class="form-control" id="search-coffees">-->
+                    <!--        </div>-->
+                    <input placeholder="Enter some text" name="name"/>
+                    <p id="values"></p>
+
+                    <button id="input2" class = "btn-primary" type="submit" id="submit2">Submit</button>
+                </form>
+
+            </div>
+
+
+
+
     <div class = "col-6">
         <table>
             <thead>
@@ -60,66 +106,9 @@
 
 
 
-<!--    Tables are a little old school, you need to refactor the code so that each coffee is displayed in a div that contains a heading displaying the coffee name, and the type of roast in a paragraph. Don't display the ids, these are only for our application's internal use-->
 
 
 
-    <div id="coffee list">
-        <div class="light">
-            <h3>Light City</h3><p>light</p>
-        </div>
-        <div class="light">
-            <h3>Half City</h3><p>light</p>
-        </div>
-        <div class="light">
-            <h3>Cinnamon</h3><p>light</p>
-        </div>
-
-<!--        Medium roast-->
-
-        <div class="medium">
-            <h3>City</h3><p>medium</p>
-        </div>
-        <div class="medium">
-            <h3>American</h3><p>medium</p>
-        </div>
-        <div class="medium">
-            <h3>Breakfast</h3><p>medium</p>
-        </div>
-
-<!--        Dark Roast-->
-
-        <div class="dark">
-            <h3>High</h3><p>dark</p>
-        </div>
-        <div class="dark">
-            <h3>Continetal</h3><p>dark</p>
-        </div>
-        <div class="dark">
-            <h3>New Orleans</h3><p>dark</p>
-        </div>
-
-        <div class="dark">
-            <h3>European</h3><p>dark</p>
-        </div>
-        <div class="dark">
-            <h3>Espresso</h3><p>dark</p>
-        </div>
-        <div class="dark">
-            <h3>Viennese</h3><p>dark</p>
-        </div>
-
-        <div class="dark">
-            <h3>Italian</h3><p>dark</p>
-        </div>
-
-        <div class="dark">
-            <h3>French</h3><p>dark</p>
-        </div>
-
-    </div>
-
-<!--    End coffee list-->
 
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
