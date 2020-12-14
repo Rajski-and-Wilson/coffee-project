@@ -90,17 +90,12 @@ function updateValue(e) {
 // const input2 = document.querySelector('input');
 //
 // input2.addEventListener('click', addCoffee);
-
-(function() {
-    // get the "username" input
-    var newCoffee = document.forms.form2.name;
-
-    // log the value of the "username" input
-    console.log(newCoffee.values);
-    return  coffees.push(value);
-
-})();
-
-
-
+var addSubmit = document.getElementById('input2')
+    addSubmit.addEventListener('click', function (e){
+      e.preventDefault()
+        var newCoffee = document.forms.form2.addCoffee;
+        var newRoast = document.forms.form2.roastSelection2;
+        console.log(newCoffee.value);
+        console.log(newRoast.value);
+    })
 
