@@ -21,37 +21,44 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-
-
-    var input1 = document.getElementById("input1");
-
-
-    var filteredCoffees2 = [];
-
-    coffees.forEach(function (coffee) {
-        if (coffee.name === input1.value) {
-            filteredCoffees2.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees2);
-}
-
-
-
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
-        // else if (coffee.name === input1.value) {
-        //     filteredCoffees.push(coffee);
-        // }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 
 
 
+}
 
+
+function updateCoffeesB(e){
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var input1 = document.getElementById('input1')
+    var filteredCoffeesB = [];
+    coffees.forEach(function (coffee) {
+        if (coffee.name === input1) {
+            filteredCoffeesB.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffeesB);
+}
+submit.addEventListener('click', updateCoffeesB());
+// var input1 = document.getElementById("input1");
+// var submit = document.getElementById('submit')
+// submit.addEventListener("click", function (e){
+//     e.preventDefault();
+//     var input1 = input1.value;
+//     var filteredCoffees2 = [];
+//     coffees.forEach(function (coffee) {
+//         if (coffee.name === input1.value) {
+//             filteredCoffees2.push(coffee);
+//         }
+//     });
+// });
+// tbody.innerHTML = renderCoffees(filteredCoffees2);
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
