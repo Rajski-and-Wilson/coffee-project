@@ -74,10 +74,10 @@ input1.addEventListener('input', updateValue);
 function updateValue(e) {
     log.textContent = e.target.value;
 }
-var submit1 = document.getElementById('submit1')
-    submit1.addEventListener('click',updateValue(e){
-        log.textContent = e.target.value;
-};
+// var submit1 = document.getElementById('submit1')
+//     submit1.addEventListener('click',updateValue(e)({
+//         log.textContent = e.target.value;
+// });
 
 
 var addSubmit = document.getElementById('input2')
