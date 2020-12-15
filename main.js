@@ -83,10 +83,10 @@ function updateValue(e) {
 var addSubmit = document.getElementById('input2')
     addSubmit.addEventListener('click', function (e){
       e.preventDefault()
-        var newCoffee = document.forms.form2.addCoffee;
-        var newRoast = document.forms.form2.roastSelection2;
-        console.log(newCoffee.value);
-        console.log(newRoast.value);
+        var newCoffee = document.forms.form2.addCoffee.value;
+        var newRoast = document.forms.form2.roastSelection2.value;
+        console.log(newCoffee);
+        console.log(newRoast);
         var coffeeObject = new Object();
         // var coffeeObject = {
         //     id : coffees.length + 1,
@@ -94,10 +94,12 @@ var addSubmit = document.getElementById('input2')
         //     roast: newRoast,
         // };
         coffeeObject.id = coffees.length +1;
-        coffeeObject.name = newCoffee.value;
-        coffeeObject.roast = newRoast.value;
+        coffeeObject.name = newCoffee;
+        coffeeObject.roast = newRoast;
         console.log(coffeeObject);
         coffees.push(coffeeObject);
+
+        tbody.innerHTML = renderCoffees(coffees);
 
 
 
