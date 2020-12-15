@@ -66,30 +66,20 @@ roastSelection.addEventListener("change", updateCoffees);
 
 
 
-const input = document.querySelector('input');
+const input1 = document.querySelector('input');
 const log = document.getElementById('values');
 
 
-input.addEventListener('input', updateValue);
-
+input1.addEventListener('input', updateValue);
 function updateValue(e) {
     log.textContent = e.target.value;
 }
+var submit1 = document.getElementById('submit1')
+    submit1.addEventListener('click',updateValue(e){
+        log.textContent = e.target.value;
+};
 
-// function addCoffee(e) {
-//     e.preventDefault();
-//     var object = {
-//         id: coffees.length + 1,
-//         name: nameInput.value,
-//         roast: roastInput.value
-//     };
-//
-//     console.log(object);
-//     return coffees.push(object);
-// };
-// const input2 = document.querySelector('input');
-//
-// input2.addEventListener('click', addCoffee);
+
 var addSubmit = document.getElementById('input2')
     addSubmit.addEventListener('click', function (e){
       e.preventDefault()
@@ -97,8 +87,21 @@ var addSubmit = document.getElementById('input2')
         var newRoast = document.forms.form2.roastSelection2;
         console.log(newCoffee.value);
         console.log(newRoast.value);
-    })
+        var coffeeObject = new Object();
+        // var coffeeObject = {
+        //     id : coffees.length + 1,
+        //     name: newCoffee,
+        //     roast: newRoast,
+        // };
+        coffeeObject.id = coffees.length +1;
+        coffeeObject.name = newCoffee.value;
+        coffeeObject.roast = newRoast.value;
+        console.log(coffeeObject);
+        coffees.push(coffeeObject);
 
+
+
+    });
 //
 // This is code for delaying a style
 // function myFunction() {  document.getElementById("myDIV").style.transitionDelay = "2s";}
