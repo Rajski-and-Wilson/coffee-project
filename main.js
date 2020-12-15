@@ -23,11 +23,20 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
 
 
+    var input1 = document.getElementById("input1");
 
 
+    var filteredCoffees2 = [];
+
+    coffees.forEach(function (coffee) {
+        if (coffee.name === input1.value) {
+            filteredCoffees2.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees2);
+}
 
 
-    var input1 = document.getElementById(input1);
 
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -39,7 +48,7 @@ function updateCoffees(e) {
         // }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
-}
+
 
 
 
