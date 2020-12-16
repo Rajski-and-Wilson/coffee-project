@@ -1,13 +1,12 @@
 body{
     margin-right: 30px;
-    background-color: ;
-
+    background-color: tan;
+    color: beige;
 }
 
 table {
     border-collapse: collapse;
     /*margin: 15px 0;*/
-    background-color: lightgray;
 }
 
 td, th {
@@ -17,6 +16,7 @@ td, th {
 #header{
     display: flex;
     justify-content: center;
+    color: beige;
 }
 
 
