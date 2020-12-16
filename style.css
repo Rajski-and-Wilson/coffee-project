@@ -1,11 +1,13 @@
 body{
     margin-right: 30px;
+    background-color: ;
 
 }
 
 table {
     border-collapse: collapse;
     /*margin: 15px 0;*/
+    background-color: lightgray;
 }
 
 td, th {

@@ -1,5 +1,7 @@
 "use strict"
 
+
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
@@ -29,36 +31,31 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 
-
-
 }
 
 
-function updateCoffeesB(e){
+
+var firstSubmit  = document.getElementById("submit");
+firstSubmit.addEventListener("click", searchCoffees)
+
+function searchCoffees(e){
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var input1 = document.getElementById('input1')
-    var filteredCoffeesB = [];
+    var input1 = document.getElementById('input1').value.toLowerCase();
+    var filteredCoffees = [];
+        console.log("Here we are inside the function");
     coffees.forEach(function (coffee) {
-        if (coffee.name === input1) {
-            filteredCoffeesB.push(coffee);
+        if (coffee.name.toLowerCase().includes(input1)) {
+            filteredCoffees.push(coffee);
+            console.log("A coffee was added");
+
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffeesB);
+    console.log(filteredCoffees);
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+
 }
-submit.addEventListener('click', updateCoffeesB());
-// var input1 = document.getElementById("input1");
-// var submit = document.getElementById('submit')
-// submit.addEventListener("click", function (e){
-//     e.preventDefault();
-//     var input1 = input1.value;
-//     var filteredCoffees2 = [];
-//     coffees.forEach(function (coffee) {
-//         if (coffee.name === input1.value) {
-//             filteredCoffees2.push(coffee);
-//         }
-//     });
-// });
-// tbody.innerHTML = renderCoffees(filteredCoffees2);
+
+
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -91,35 +88,6 @@ roastSelection.addEventListener("change", updateCoffees);
 
 
 
-
-// const input1 = document.querySelector('input');
-// const log = document.getElementById('values');
-
-
-// input1.addEventListener('input', updateValue);
-// function updateValue(e) {
-//     log.textContent = e.target.value;
-// }
-// var submit1 = document.getElementById('submit1')
-//     submit1.addEventListener('click',updateValue(e)({
-//         log.textContent = e.target.value;
-// });
-
-
-// var submit = document.getElementById(submit);
-//
-// submit.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     coffees.filter(coffees.name === input1.value);
-//     tbody.innerHTML = renderCoffees(coffees);
-//
-// })
-
-
-
-
-
-
 var addSubmit = document.getElementById('input2')
     addSubmit.addEventListener('click', function (e){
       e.preventDefault()
@@ -144,6 +112,4 @@ var addSubmit = document.getElementById('input2')
 
 
     });
-//
-// This is code for delaying a style
-// function myFunction() {  document.getElementById("myDIV").style.transitionDelay = "2s";}
+
